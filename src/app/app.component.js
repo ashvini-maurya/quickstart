@@ -9,14 +9,36 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var Hero = (function () {
+    function Hero() {
+    }
+    return Hero;
+}());
+exports.Hero = Hero;
 var AppComponent = (function () {
     function AppComponent() {
-        this.name = 'Angular';
+        this.title = 'Tour of Heroes';
+        // hero: Hero = {
+        // 	id: 1,
+        // 	name: 'Windstorm'
+        // };
+        this.HEROES = [
+            { id: 11, name: 'Mr. Nice' },
+            { id: 12, name: 'Narco' },
+            { id: 13, name: 'Bombasto' },
+            { id: 14, name: 'Celeritas' },
+            { id: 15, name: 'Magneta' },
+            { id: 16, name: 'RubberMan' },
+            { id: 17, name: 'Dynama' },
+            { id: 18, name: 'Dr IQ' },
+            { id: 19, name: 'Magma' },
+            { id: 20, name: 'Tornado' }
+        ];
     }
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: "<h1>Hello {{name}}</h1>",
+            template: "\n  \t<h1>{{title}}</h1>\n  \t<h2>{{hero.name}} details!</h2>\n  \t<div><label>id: </label>{{hero.id}}</div>\n  \t<div>\n  \t\t<label>name: </label>\n  \t\t\t<input [(ngModel)]=\"hero.name\" placeholder=\"name\">\n  \t</div>\n  \t",
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
